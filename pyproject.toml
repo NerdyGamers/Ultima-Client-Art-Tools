@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "ultima-client-art-tools"
+version = "1.0.0"
+description = "A modular Python toolkit for extracting and exporting Ultima Online client assets."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+authors = [
+    { name = "NerdyGamers", email = "" }
+]
+keywords = [
+    "ultima-online", "uo", "game-tools", "asset-extraction",
+    "mul", "idx", "shard", "ultima"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Games/Entertainment",
+    "Topic :: Multimedia :: Graphics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "Pillow>=9.0",
+    "tqdm>=4.60",
+    # ultimapy must be installed manually from:
+    # https://github.com/jackuoll/ultima-py
+    # pip install git+https://github.com/jackuoll/ultima-py.git
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+    "ruff",
+    "build",
+    "twine",
+]
+
+[project.urls]
+Homepage = "https://github.com/NerdyGamers/Ultima-Client-Art-Tools"
+Repository = "https://github.com/NerdyGamers/Ultima-Client-Art-Tools"
+"Bug Tracker" = "https://github.com/NerdyGamers/Ultima-Client-Art-Tools/issues"
+
+[project.scripts]
+uoart = "ultima_client_art_tools.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
