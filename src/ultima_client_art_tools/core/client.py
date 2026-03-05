@@ -1,6 +1,7 @@
 import os
 from ultimapy.sdk.art import Art
 from ultimapy.sdk.gumps import Gumps
+from ultimapy.sdk.animations import Animations
 
 
 class UOClient:
@@ -29,3 +30,9 @@ class UOClient:
     def get_gump(self, gump_id: int):
         self._activate()
         return Gumps.get_gump(gump_id)
+
+    def get_animation_frame(self, body_id: int, action: int = 0, direction: int = 0):
+        """Return a single animation frame for the given body/action/direction."""
+        self._activate()
+        anim = Animations()
+        return anim.get_frame(body_id, action=action, direction=direction)
