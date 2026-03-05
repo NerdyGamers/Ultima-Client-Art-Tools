@@ -6,9 +6,9 @@ Outputs PNGs to output/art/land/.
 import os
 from tqdm import tqdm
 
-from core.client import UOClient
-from core.exporter import save_image
-from config import MOD_CLIENT, OUTPUT_DIR
+from ultima_client_art_tools.core.client import UOClient
+from ultima_client_art_tools.core.exporter import save_image
+from ultima_client_art_tools.config import MOD_CLIENT, OUTPUT_DIR
 
 LAND_TILE_MAX = 0x4000  # 16384 terrain entries
 

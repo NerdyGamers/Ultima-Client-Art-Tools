@@ -1,9 +1,9 @@
 import sys
 
-from tools import extract_art
-from tools import extract_land
-from tools import extract_gumps
-from tools import extract_anims
+from ultima_client_art_tools.tools import extract_art
+from ultima_client_art_tools.tools import extract_land
+from ultima_client_art_tools.tools import extract_gumps
+from ultima_client_art_tools.tools import extract_anims
 
 TOOLS = {
     "art":   extract_art.run,
