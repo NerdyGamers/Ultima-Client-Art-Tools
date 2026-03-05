@@ -7,10 +7,10 @@ each modified static as a PNG to output/art/items/.
 import os
 from tqdm import tqdm
 
-from core.client import UOClient
-from core.diff import diff
-from core.exporter import save_image
-from config import CLEAN_CLIENT, MOD_CLIENT, OUTPUT_DIR
+from ultima_client_art_tools.core.client import UOClient
+from ultima_client_art_tools.core.diff import diff
+from ultima_client_art_tools.core.exporter import save_image
+from ultima_client_art_tools.config import CLEAN_CLIENT, MOD_CLIENT, OUTPUT_DIR
 
 
 def run():
